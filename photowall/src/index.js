@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
 import ReactDOM from 'react-dom';
+import './styles/stylesheet.css';
 
-
-import Main from './Components/Main'
+import Main from './Components/Main';
 
 const element = React.createElement('h1',null,"Simpliciti Studio!");
 

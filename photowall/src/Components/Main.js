@@ -83,16 +83,15 @@ class Main extends Component {
             {
                 this.state.screen ==='photos' && (
                 <div>
-                <Title title={'Photowall'}/>
-                <PhotoWall posts={this.state.posts} onRemovePhoto={this.removePhoto}/>
-                
+                    <Title title={'Photowall'}/>
+                    <PhotoWall posts={this.state.posts} onRemovePhoto={this.removePhoto}/>
                 </div>)
             }
             {
-                this.state.screen ==='addPhoto'(
-                    <div>
-                        <AddPhoto/>
-                    </div>
+                this.state.screen ==='addPhoto' && (
+                <div>
+                    <AddPhoto/>
+                </div>
                 )
             }
 

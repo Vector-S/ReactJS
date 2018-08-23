@@ -4,6 +4,13 @@ import ReactDOM from 'react-dom';
 import './styles/stylesheet.css';
 
 import Main from './Components/Main';
+import {BrowserRouter} from 'react-router-dom';
+import {createStore} from 'redux';
+import rootReducer from './redux/reducer';
+
+
+
+const store = createStore(rootReducer);
 
 const element = React.createElement('h1',null,"Simpliciti Studio!");
 
@@ -11,6 +18,7 @@ const tasks = ['take out the trash', 'shovel the driveway', 'walk the dog']
 const elements =React.createElement('ol',null,
         tasks.map((task,index) => React.createElement('li',{key:index },task) )
     );
+
 const element2 =
 <div>
     <h1>Task List</h1>
@@ -22,8 +30,7 @@ const element2 =
 
 
 
-ReactDOM.render(<Main/>,document.getElementById('root'));
-
+ReactDOM.render(<BrowserRouter><Main/></BrowserRouter>,document.getElementById('root'));
 
 
 
